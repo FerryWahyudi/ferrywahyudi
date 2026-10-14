@@ -126,12 +126,24 @@
   .about-text .about-lede{max-width:46ch;}
   .btn-download{
     display:inline-flex;align-items:center;gap:9px;margin-top:8px;
-    background:var(--grad);color:#fff;font-weight:600;font-size:14px;
+    background:linear-gradient(120deg,var(--violet),var(--fuchsia),var(--cyan),var(--violet));background-size:300% 100%;
+    animation:btnShiftCv 6s ease-in-out infinite;
+    color:#fff;font-weight:600;font-size:14px;
     padding:13px 24px;border-radius:99px;transition:transform .2s, box-shadow .2s;
     box-shadow:0 8px 24px -8px rgba(59,130,246,0.45);
   }
   .btn-download:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(59,130,246,0.6);}
   .btn-download svg{width:16px;height:16px;}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
+  .btn-row .btn-download{margin-top:0;}
+  .btn-download-outline{
+    background:linear-gradient(120deg,#2dd4bf,#22c55e,#fbbf24,#2dd4bf);background-size:300% 100%;
+    animation:btnShiftPortfolio 5s ease-in-out infinite;
+    color:#06201c;box-shadow:0 8px 24px -8px rgba(45,212,191,0.5);
+  }
+  .btn-download-outline:hover{box-shadow:0 12px 28px -8px rgba(45,212,191,0.7);}
+  @keyframes btnShiftCv{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+  @keyframes btnShiftPortfolio{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
 
   .about-statement{
     max-width:760px;margin:0 auto;text-align:center;
